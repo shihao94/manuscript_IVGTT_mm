@@ -61,7 +61,6 @@ $^{2}$Laboratory X, Institute X, Department X, Organization X, City X , State XX
 %%% Leave the Abstract empty if your article does not require one, please see the Summary Table for full details.
 \section{}
 % For full guidelines regarding your manuscript please refer to \href{http://www.frontiersin.org/about/AuthorGuidelines}{Author Guidelines}.
-
 % As a primary goal, the abstract should render the general significance and conceptual advance of the work clearly accessible to a broad readership. References should not be cited in the abstract. Leave the Abstract empty if your article does not require one, please see \href{http://www.frontiersin.org/about/AuthorGuidelines#SummaryTable}{Summary Table} for details according to article type. 
 
 \tiny
@@ -71,21 +70,31 @@ $^{2}$Laboratory X, Institute X, Department X, Organization X, City X , State XX
 \section{INTRODUCTION}
 
 % For Original Research Articles \citep{conference}, Clinical Trial Articles \citep{article}, and Technology Reports \citep{patent}, the introduction should be succinct, with no subheadings \citep{book}. For Case Reports the Introduction should include symptoms at presentation \citep{chapter}, physical exams and lab results \citep{dataset}.
-meta-analysis, IVGTT and minimal model, SI and then SG, Physiologic of SG, population approach, previous papers
+meta-analysis, IVGTT and minimal model, SI and then SG, Physiologic of SG, population approach, previous papers,
 pooled study, algorithm
-
 
 \section{MATERIALS AND METHODS}
 
 \subsection{Clinical study data}
 In this study, we used the dataset of 522 subjects pooled from 28 studies, including 241 healthy subjects, 118 obese subjects and 163 type 2 diabetes patients (T2DM). Obese subjects were classified as people in good general health with a body mass index (BMI) larger than 28 $kg/m^2$. Patients in the T2DM cohort had type 2 diabetes at the baseline or had the administration of a placebo. 238 of the subjects underwent an insulin-modified IVGTT and 284 had an IVGTT. Demographic characteristics were collected and summarized in Table. \ref{tab:demo}, which includes sex, age, weight, height and body mass index. For the subjects with missing continuous covariates, mean values reported in the original papers were used. For 51 subjects, the values of height, weight and BMI were missing, and only the range of BMI were reported in the paper. We used a virtual population generator (PopGen, \cite{McNally2015}) to generate a virtual population and then applied the calculated mean weight to those subjects. The heights were imputed using the equation: $H=\sqrt{weight/BMI}$ and the mean BMI value. If the sex information of subjects from a study was missing but the sex ratio (i.e., male/female) was given in the literature, random assignment was used. If no information about gender was provided, the sex value was set as not available (NA).
-% insert reference
 
 \subsection{Minimal model}
-% no need to have model figure
+We used M1 version of minimal model (\cite{Bergman1979}, \cite{Araujo-vilar1998}) to describe glucose-insulin disposition processes. The model equations can be showed as:
+\begin{equation}
+\frac{dG(t)}{dt} =-(S_G+X(t))*G(t)+(p_1+X_{basal})*G_{basal} \quad G_{t=0} =G_{basal}+Dose\label{eq:01}
+\end{equation}
+\begin{equation}
+\frac{dX(t)}{dt} =-p2*X(t)+p2*S_I*I(t) \quad X_{basal} =S_I*I_{basal}\label{eq:02}
+\end{equation}
+
+\begin{equation}
+\label{eq:04}
+\end{equation}
+where $Dose$ denotes the glucose dose at time zero, $G(t)$ is the plasma glucose amount (mmol), $G_{basal}$ is defined as basal glucose amount from the last measurement. $X(t)$ is the remote insulin action (min$^{-1}$) and $X_{basal}$ is its basal value. $I(t)$ is the plasma insulin concentration (pmol/L) and $I_{basal}$ is the last measured concentration defined as the baseline. $I(t)$ was set as known and error-free inputs of the model. Four model were estimated based on the measured glucose concentration: glucose effectiveness ($S_G$, min$^{-1}$), insulin sensitivity ($S_I$, min$^{-1}$/(pmol/L)), remote insulin action parameter (min$^{-1}$) and the volume of glucose distribution (L). The glucose measurements prior to 5 min were excluded from the analysis, since the one-compartment model is not suitable for capturing the initial phase of glucose kinetics (\cite{Vicini1999}). \\
 
 \subsection{Population modeling}
-base model; covariate model; modeling process
+% base model; covariate model; modeling process
+
 
 \section{RESULTS}
 
@@ -111,9 +120,7 @@ base model; covariate model; modeling process
 %\subsection{Equations}
 % Equations should be inserted in editable format from the equation editor.
 
-%\begin{equation}
-%\sum x+ y =Z\label{eq:01}
-%\end{equation}
+
 
 \subsection{Figures}
 % Frontiers requires figures to be submitted individually, in the same order as they are referred to in the manuscript. Figures will then be automatically embedded at the bottom of the submitted manuscript. Kindly ensure that each table and figure is mentioned in the text and in numerical order. Figures must be of sufficient resolution for publication \href{http://home.frontiersin.org/about/author-guidelines#ResolutionRequirements}{see here for examples and minimum requirements}. Figures which are not according to the guidelines will cause substantial delay during the production process. Please see \href{http://home.frontiersin.org/about/author-guidelines#GeneralStyleGuidelinesforFigures}{here} for full figure guidelines. Cite figures with subfigures as figure \ref{fig:2}B.
