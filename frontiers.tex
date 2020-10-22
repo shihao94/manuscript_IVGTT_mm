@@ -18,6 +18,8 @@
 %\setcitestyle{square} % for Physics and Applied Mathematics and Statistics articles
 \usepackage{url,hyperref,lineno,microtype,subcaption}
 \usepackage[onehalfspacing]{setspace}
+\usepackage{adjustbox}
+\usepackage{graphicx}
 
 \linenumbers
 
@@ -85,7 +87,7 @@ We employed M1 version of the minimal model (\cite{Bergman1979}, \cite{Araujo-vi
 where $Dose$ denotes the glucose dose at time zero, $G(t)$ is the plasma glucose amount (mmol), $G_{basal}$ is defined as basal glucose amount from the last measurement. $X(t)$ is the remote insulin action (min$^{-1}$) and $X_{basal}$ is its basal value. $I(t)$ is the plasma insulin concentration (pmol/L) and $I_{basal}$ is the last measured concentration defined as the baseline. $I(t)$ was set as known and error-free inputs of the model. Four model were estimated based on the measured glucose concentration: glucose effectiveness at zero insulin ($GEZI$, min$^{-1}$), insulin sensitivity ($S_I$, min$^{-1}$/(pmol/L)), remote insulin action parameter (min$^{-1}$) and the volume of glucose distribution (L). The glucose measurements prior to 5 min were excluded from the analysis, since the one-compartment model is not suitable for capturing the initial phase of glucose kinetics (\cite{Vicini1999}).
 
 \subsection{Population modeling}
-The minimal model (M1 version) was used as our base model and physiological covariates were evaluated to account for inter-individual variability (IIV) in model parameter estimates. We first analyzed the glucose concentration data of healthy, obese and T2DM cohorts separately, using the maximum-likelihood, expectation maximization (MLEM) program in ADAPT software (Version 5) (\cite{DArgenioDavidZ.SchumitzkyAlan2009}). The four model parameteres were assumed to follow a multivariate log-normal distribution around a typical value, with a full covariance matrix. We used a proportional error model to describe the residual errors. Individual random effects of parameter estimates were obtained and plotted versus physiological covariates to explore their relations preliminarily. % In all the three cohorts, weight-related indexes (body weight, BMI) were found to negatively associate with SI (results not shown), which is consistent with the previous investigation %cite the book. Also, weight-related indexes (height, weight, BMI) are positively correlated with V (results not shown). This is also in line with a previous report (\cite{Denti2010}).
+The minimal model (M1 version) was used as our base model and physiological covariates were evaluated to account for inter-individual variability (IIV) in model parameter estimates. We first analyzed the glucose concentration data of healthy, obese and T2DM cohorts separately, using the maximum-likelihood, expectation maximization (MLEM) program in ADAPT software (Version 5) (\cite{DArgenioDavidZ.SchumitzkyAlan2009}). The four model parameters were assumed to follow a multivariate log-normal distribution around a typical value, with a full covariance matrix. We used a proportional error model to describe the residual errors. Individual random effects of parameter estimates were obtained and plotted versus physiological covariates to explore their relations preliminarily. % In all the three cohorts, weight-related indexes (body weight, BMI) were found to negatively associate with SI (results not shown), which is consistent with the previous investigation %cite the book. Also, weight-related indexes (height, weight, BMI) are positively correlated with V (results not shown). This is also in line with a previous report (\cite{Denti2010}).
 Next, we pooled the data from the three cohorts and the base model was fitted to the data. The development of covariate models was based on preliminary relations in different cohorts, previous reports (\cite{Denti2010}), % bergman book,
 scientific interest and mechanistic plausibility. The covariates were selected based on good estimate precision and improved objection function value (-2 log likelihood) via forward addition and backward elimination (P$<$0.01). We tested potential covariate models for $S_I$ first, followed by $V$, $GEZI$ and $p2$. For continuous covariates (i.e., weight, height, BMI, age), power models centered at their median values were used. For discrete covariates (i.e., sex), a proportional change in the typical value and power term was investigated in the modeling process. The random effects of model parameters for the final model were checked against covariates to evaluate the remaining individual variation around the typical values. 
 
@@ -187,6 +189,97 @@ The datasets [GENERATED/ANALYZED] for this study can be found in the [NAME OF RE
 %%% If you don't add the figures in the LaTeX files, please upload them when submitting the article.
 %%% Frontiers will add the figures at the end of the provisional pdf automatically
 %%% The use of LaTeX coding to draw Diagrams/Figures/Structures should be avoided. They should be external callouts including graphics.
+
+\begin{table}[h]
+\caption{}
+\label{tab:studies}
+\scalebox{0.55}{
+\begin{tabular}{llllllllll}
+\hline
+study group &
+  cohort &
+  Number of subjects &
+  sex &
+  mean age (yrs) &
+  mean weight (kg) &
+  mean BMI (kg/m\textasciicircum{}2) &
+  mean height (cm) &
+  study type &
+  Reference \\ \hline
+2   & T2DM    & 9  & known             & 62.11 (known)      & 73.11 (known)  & 28.34 (known)      & 160.78 (known)      & IM-IVGTT & 2001\_Gemfibrozil\_Avogaro \\
+3   & T2DM    & 9  & known             & 62.11 (known)      & 73.11 (known)  & 28.34 (known)      & 160.78 (known)      & IM-IVGTT & 2001\_Gemfibrozil\_Avogaro \\
+6   & Control & 8  & known             & 24.62 (known)      & 66.25 (known)  & 21.37 (known)      & 175.75 (known)      & IM-IVGTT & 2002\_VODKA\_Avogaro-cnt   \\
+6   & Obese   & 1  & known             & 51 (known)         & 85 (known)     & 30.12 (known)      & 168 (known)         & IM-IVGTT & 2002\_VODKA\_Avogaro-cnt   \\
+8   & Control & 4  & known             & 52.25 (known)      & 72 (known)     & 23.42 (known)      & 175 (known)         & IM-IVGTT & 2004\_Vodka\_Avogaro-T2    \\
+8   & Obese   & 4  & known             & 52.75 (known)      & 99.5 (known)   & 34.36 (known)      & 170.25 (known)      & IM-IVGTT & 2004\_Vodka\_Avogaro-T2    \\
+10  & T2DM    & 8  & random assignment & 64.5 (known)       & 88.38 (known)  & 29.34 (known)      & 173.38 (known)      & IM-IVGTT & 2004\_Vodka\_Avogaro-T2    \\
+17  & T2DM    & 6  & known             & 57 (known)         & 92.08 (known)  & 29.19 (known)      & 177.5 (known)       & IM-IVGTT & 2003\_CAIAPO\_Ludvik       \\
+18  & T2DM    & 18 & known             & 57.67 (known)      & 88.26 (known)  & 27.76 (known)      & 178.11 (known)      & IM-IVGTT & 2003\_CAIAPO\_Ludvik       \\
+20  & Control & 11 & known             & 29 (mean value)    & 67.73 (known)  & 22.5 (mean value)  & 173.35 (calculated) & IVGTT    & 1999\_alcohol\_avogaro     \\
+23  & T2DM    & 31 & NA                & 50.83 (known)      & 85.81 (known)  & 29.51 (known)      & 170.84 (known)      & IM-IVGTT & 2008\_GAD\_Nolan           \\
+25  & T2DM    & 10 & known             & 50.4 (known)       & 78.75 (known)  & 29.95 (known)      & 161.6 (known)       & IM-IVGTT & *** never published ***    \\
+27  & Obese   & 2  & known             & 29 (known)         & 100.35 (known) & 35.23 (known)      & 169.5 (known)       & IM-IVGTT & not published              \\
+27  & T2DM    & 2  & known             & 36 (known)         & 107.2 (known)  & 33.97 (known)      & 177.5 (known)       & IM-IVGTT & not published              \\
+31  & T2DM    & 10 & known             & 66 (known)         & 64.3 (known)   & 23.8 (mean value)  & 164.12 (calculated) & IVGTT    & {[}1{]}                    \\
+32  & Control & 6  & known             & 73.17 (known)      & 63 (known)     & 23.1 (mean value)  & 164.77 (calculated) & IVGTT    & {[}1{]}                    \\
+34  & Control & 11 & known             & 24.64 (known)      & 71.55 (known)  & 23.7 (mean value)  & 172.93 (calculated) & IVGTT    & {[}1{]}                    \\
+35  & T2DM    & 23 & known             & 28.39 (known)      & 107.1 (known)  & 34.78 (known)      & 175.3 (known)       & IM-IVGTT & 2005\_YoungT2\_Nolan       \\
+36  & Control & 9  & known             & 35.22 (known)      & 66.71 (known)  & 23 (known)         & 170.33 (known)      & IM-IVGTT & 2005\_YoungT2\_Nolan       \\
+37  & Obese   & 10 & known             & 18.6 (known)       & 109.25 (known) & 35.85 (known)      & 174.3 (known)       & IM-IVGTT & 2005\_YoungT2\_Nolan       \\
+39  & T2DM    & 5  & known             & 12.24 (known)      & 64.8 (known)   & 27.08 (known)      & 154.6 (known)       & IM-IVGTT & 2005\_YoungT2\_Nolan       \\
+41  & Control & 1  & known             & 18 (known)         & 64 (known)     & 21.63 (known)      & 172 (known)         & IVGTT    & *** never published ***    \\
+41  & Obese   & 1  & known             & 36 (known)         & 75 (known)     & 29.67 (known)      & 159 (known)         & IVGTT    & *** never published ***    \\
+42  & Control & 13 & known             & 38 (known)         & 66.51 (known)  & 23.67 (known)      & 167.08 (known)      & IM-IVGTT & 1998\_InsSens\_Pacini      \\
+42  & Obese   & 2  & known             & 45 (known)         & 83.5 (known)   & 28.38 (known)      & 171.5 (known)       & IM-IVGTT & 1998\_InsSens\_Pacini      \\
+44  & Control & 13 & known             & 38 (known)         & 66.51 (known)  & 23.67 (known)      & 167.08 (known)      & IVGTT    & 1998\_InsSens\_Pacini      \\
+44  & Obese   & 3  & known             & 51.33 (known)      & 84 (known)     & 28.73 (known)      & 171 (known)         & IVGTT    & 1998\_InsSens\_Pacini      \\
+46  & Control & 10 & known             & 26.3 (known)       & 57 (known)     & 20.72 (known)      & 166.1 (known)       & IM-IVGTT & 2005\_PCOS\_Gennarelli     \\
+47  & T2DM    & 10 & known             & 57.8 (known)       & 69 (known)     & 25.35 (known)      & 164.6 (known)       & IVGTT    & *** never published ***    \\
+48  & T2DM    & 10 & known             & 54.6 (known)       & 68.9 (known)   & 25.31 (known)      & 164.6 (known)       & IVGTT    & *** never published ***    \\
+49  & Control & 13 & NA                & 68.31 (known)      & 71.69 (known)  & 24.58 (known)      & 170.54 (known)      & IVGTT    & {[}2{]}                    \\
+50  & Control & 10 & NA                & 26.7 (known)       & 72.3 (known)   & 22.86 (known)      & 177.8 (known)       & IVGTT    & {[}2{]}                    \\
+52  & Control & 10 & known             & 36.1 (known)       & 71.25 (known)  & 23.75 (known)      & 173.1 (known)       & IVGTT    & {[}3{]}                    \\
+55  & Control & 10 & known             & 27 (known)         & 62.12 (PopGen) & 24.9 (PopGen)      & 157.95 (calculated) & IVGTT    & 1998\_AGING\_Ahren         \\
+56  & Control & 10 & known             & 63 (known)         & 68.02 (PopGen) & 25.2 (PopGen)      & 164.29 (calculated) & IVGTT    & 1998\_AGING\_Ahren         \\
+57  & Control & 10 & known             & 27 (known)         & 74.36 (PopGen) & 24.9 (PopGen)      & 172.81 (calculated) & IVGTT    & 1998\_AGING\_Ahren         \\
+58  & Control & 10 & known             & 63 (known)         & 78.56 (PopGen) & 25.2 (PopGen)      & 176.56 (calculated) & IVGTT    & 1998\_AGING\_Ahren         \\
+61  & Control & 9  & known             & 17 (known)         & 54.22 (known)  & 19.75 (known)      & 165.44 (known)      & IVGTT    & {[}5{]}                    \\
+66 &
+  Control &
+  8 &
+  random assignment &
+  35.5 (known) &
+  70.25 (known) &
+  23.15 (known) &
+  173.62 (known) &
+  IVGTT &
+  2001\_MyocInfarct\_Cavallo \\
+66  & Obese   & 2  & random assignment & 36 (known)         & 95.5 (known)   & 29.94 (known)      & 178.5 (known)       & IVGTT    & 2001\_MyocInfarct\_Cavallo \\
+67  & Obese   & 13 & known             & 13.31 (known)      & 84.23 (known)  & 32.45 (known)      & 161 (known)         & IVGTT    & {[}6{]}                    \\
+70  & Control & 4  & known             & 32.25 (known)      & 75.75 (known)  & 23.86 (known)      & 177.75 (known)      & IM-IVGTT & 2002\_AGENESIS\_Roden      \\
+73 &
+  Control &
+  9 &
+  known &
+  43.9 (mean value) &
+  65.7 (mean value) &
+  24.1 (mean value) &
+  165.11 (calculated) &
+  IVGTT &
+  2008\_hanisurya\_thyroid \\
+76  & Control & 30 & known             & 30.9 (known)       & 63.08 (known)  & 22.6 (known)       & 167.13 (known)      & IM-IVGTT & 2012\_pGDM\_tura           \\
+76  & Obese   & 8  & known             & 33.75 (known)      & 88.17 (known)  & 34.08 (known)      & 160.88 (known)      & IM-IVGTT & 2012\_pGDM\_tura           \\
+79  & Obese   & 18 & known             & 44.89 (mean value) & 114.11 (known) & 39.44 (mean value) & 169.15 (calculated) & IVGTT    & {[}8{]}                    \\
+80  & Control & 15 & known             & 30.33 (known)      & 65.53 (known)  & 21.42 (known)      & 174.53 (known)      & IVGTT    & {[}8{]}                    \\
+80  & Obese   & 2  & known             & 57.5 (known)       & 82 (known)     & 34.48 (known)      & 153.5 (known)       & IVGTT    & {[}8{]}                    \\
+81  & Control & 7  & known             & 30.29 (known)      & 70 (known)     & 23.53 (known)      & 172.14 (known)      & IVGTT    & {[}9{]}                    \\
+104 & T2DM    & 12 & known             & 64 (mean value)    & 95 (known)     & 28.61 (mean value) & 182.17 (calculated) & IM-IVGTT & 2010\_alcohol\_ludvik      \\
+106 & Obese   & 17 & known             & 38.06 (known)      & 84.32 (known)  & 33.37 (known)      & 158.88 (known)      & IVGTT    & 2006\_Davi\_JACC           \\
+107 & Obese   & 13 & known             & 42.69 (known)      & 94.05 (known)  & 37.4 (known)       & 158.54 (known)      & IVGTT    & 2006\_Davi\_JACC           \\
+108 & Obese   & 11 & known             & 45.91 (known)      & 111.15 (known) & 44.72 (known)      & 157.55 (known)      & IVGTT    & 2003\_INFLAMMATORY\_Davi   \\
+109 & Obese   & 11 & known             & 48.18 (known)      & 95.82 (known)  & 38.08 (known)      & 158.55 (known)      & IVGTT    & 2003\_INFLAMMATORY\_Davi  \\  \hline
+\end{tabular}}
+\end{table}
 
 \begin{table}[h]
 \caption{Demographic characteristics of the study subjects}
