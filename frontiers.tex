@@ -74,7 +74,7 @@ pooled study, algorithm
 \section{MATERIALS AND METHODS}
 
 \subsection{Clinical study data}
-In this study, we used the dataset of 522 subjects pooled from 28 studies, including 241 healthy subjects, 118 obese subjects and 163 type 2 diabetes patients (T2DM). Obese subjects were classified as people in good general health with a body mass index (BMI) larger than 28 $kg/m^2$. Patients in the T2DM cohort had type 2 diabetes at the baseline or had a placebo administration. 238 of the subjects underwent an insulin-modified IVGTT and 284 had an IVGTT. Demographic characteristics were collected and summarized in Table. \ref{tab:demo}, which includes sex, age, weight, height and body mass index. For the subjects with missing continuous covariates, mean values reported in the original papers were used. For 51 subjects from two studies, the values of height, weight and BMI were missing, and only the ranges of BMI were reported. We used a virtual population generator (PopGen, \cite{McNally2015}) to generate virtual subjects for these two studies and applied the calculated mean weight to those subjects. Then, the heights were imputed using the equation: $H=\sqrt{weight/BMI}$ and the given mean BMI value. The sex information of 18 subjects from two studies was missing but the sex ratio (i.e., male/female) was mentioned in the literature, so random assignment was used to fill in the sex value. For 41 subjects, no sex information about gender was provided and their sex values were set as not available (NA).
+In this study, we pooled the glucose-insulin concentration-time data of 522 subjects from 28 studies. In Table. \ref{tab:studies}, we summarize the pooled studies by each study group, with the cohorts, original sex information, mean demographic characteristics, study types and reference displayed. The whole dataset includes 241 healthy subjects, 118 obese subjects and 163 type 2 diabetes patients (T2DM). Obese subjects were classified as people in good general health with a body mass index (BMI) larger than 28 $kg/m^2$. Patients in the T2DM cohort had type 2 diabetes at the baseline or had a placebo administration. 238 of the subjects underwent an insulin-modified IVGTT and 284 had an IVGTT. For the subjects with missing continuous covariates, mean values reported in the original papers were used (labelled as "(mean value)" in Table. \ref{tab:studies}). For 40 subjects from a study (study groups 55, 56, 57, 58), the values of height, weight and BMI were missing, and only the ranges of BMI were reported. We used a virtual population generator (PopGen, \cite{McNally2015}) to generate virtual subjects for these four groups and applied the calculated mean weight to those subjects. Then, the heights were imputed using the equation: $H=\sqrt{weight/BMI}$ and the given mean BMI value. The sex information of 18 subjects from two studies (study groups 10, 66) was missing but the sex ratio (i.e., male/female) was mentioned in the literature, so random assignment was used to fill in the sex value. For 41 subjects from two studies (study groups 23, 49, 50), no sex information about gender was provided and their sex values were set as not available (NA). After missing covariate imputation, demographic characteristics of all the subjects were summarized in Table. \ref{tab:demo}, which includes sex, age, weight, height and body mass index. 
 
 \subsection{Minimal model}
 We employed M1 version of the minimal model (\cite{Bergman1979}, \cite{Araujo-vilar1998}) to describe glucose-insulin disposition processes. The model equations can be showed as:
@@ -191,20 +191,20 @@ The datasets [GENERATED/ANALYZED] for this study can be found in the [NAME OF RE
 %%% The use of LaTeX coding to draw Diagrams/Figures/Structures should be avoided. They should be external callouts including graphics.
 
 \begin{table}[h]
-\caption{}
+\caption{Summary of pooled data information by each study group}
 \label{tab:studies}
 \scalebox{0.55}{
 \begin{tabular}{llllllllll}
 \hline
-study group &
-  cohort &
+Study group &
+  Cohort &
   Number of subjects &
-  sex &
-  mean age (yrs) &
-  mean weight (kg) &
-  mean BMI (kg/m\textasciicircum{}2) &
-  mean height (cm) &
-  study type &
+  Sex &
+  Mean age (yrs) &
+  Mean weight (kg) &
+  Mean BMI (kg/m\textasciicircum{}2) &
+  Mean height (cm) &
+  Study type &
   Reference \\ \hline
 2   & T2DM    & 9  & known             & 62.11 (known)      & 73.11 (known)  & 28.34 (known)      & 160.78 (known)      & IM-IVGTT & 2001\_Gemfibrozil\_Avogaro \\
 3   & T2DM    & 9  & known             & 62.11 (known)      & 73.11 (known)  & 28.34 (known)      & 160.78 (known)      & IM-IVGTT & 2001\_Gemfibrozil\_Avogaro \\
