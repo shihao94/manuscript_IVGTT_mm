@@ -170,24 +170,6 @@ The datasets [GENERATED/ANALYZED] for this study can be found in the [NAME OF RE
 %%% Make sure to upload the bib file along with the tex file and PDF
 %%% Please see the test.bib file for some examples of references
 
-%%% Please be aware that for original research articles we only permit a combined number of 15 figures and tables, one figure with multiple subfigures will count as only one figure.
-%%% Use this if adding the figures directly in the mansucript, if so, please remember to also upload the files when submitting your article
-%%% There is no need for adding the file termination, as long as you indicate where the file is saved. In the examples below the files (logo1.eps and logos.eps) are in the Frontiers LaTeX folder
-%%% If using *.tif files convert them to .jpg or .png
-%%%  NB logo1.eps is required in the path in order to correctly compile front page header %%%
-
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[width=15cm]{logos}
-\end{center}
-\caption{This is a figure with sub figures, \textbf{(A)} is one logo, \textbf{(B)} is a different logo.}\label{fig:2}
-\end{figure}
-
-%%% If you are submitting a figure with subfigures please combine these into one image file with part labels integrated.
-%%% If you don't add the figures in the LaTeX files, please upload them when submitting the article.
-%%% Frontiers will add the figures at the end of the provisional pdf automatically
-%%% The use of LaTeX coding to draw Diagrams/Figures/Structures should be avoided. They should be external callouts including graphics.
-
 \begin{table}[h]
 \caption{Summary of pooled data information by each study group}
 \label{tab:studies}
@@ -288,6 +270,17 @@ Height (cm)                   &             & 169±10.1 & 130  & 168 & 196 \\
 BMI (kg/$m^2$) &             & 28.0±6.76  & 15.9  & 25.3  & 53.9  \\ \hline
 \end{tabular}
 \end{table}
+
+%%% Please be aware that for original research articles we only permit a combined number of 15 figures and tables, one figure with multiple subfigures will count as only one figure.
+%%% If using *.tif files convert them to .jpg or .png
+%%%  NB logo1.eps is required in the path in order to correctly compile front page header %%%
+%%% Frontiers will add the figures at the end of the provisional pdf automatically
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=15cm]{p2.PNG}
+\end{center}
+\caption{Overview of covariate values and relationships}\label{fig1}
+\end{figure}
 
 \end{document}
 
