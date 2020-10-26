@@ -96,13 +96,15 @@ scientific interest and mechanistic plausibility. The covariates were selected b
 After missing covariate imputation, demographic characteristics of 497 subjects were summarized in Table. \ref{tab:demo}, which includes sex, age, weight, height and body mass index. A graphic overview of investigated covariates is shown in Figure \ref{fig: cova}. \\
 Using the data of each of the three cohorts, weight-related indexes (body weight, BMI) were found to negatively associate with $S_I$ (results not shown), which is consistent with the previous investigation. %cite the book. 
 Also, weight-related indexes (height, weight, BMI) are positively correlated with V (results not shown). This is also in line with a previous report (\cite{Denti2010}).
-After pooling all the data together, the following minimal model with covariates was selected to describe the insulin-glucose profiles: $GEZI=0.0211*(1-0.480*DM)$; for healthy and obese subjects, $DM$ is 0; for T2DM subjects, $DM$ is 1; $S_I=(5.59e-05)*(1-0.575*DM)*(BMI/25.335)^{-2.12}$; BMI is in $kg/m^2$; $p2=0.0428$; $V=12.0*(weight/75)^{0.851}$; weight is in kg. The incorporation of these covariates into the final model reduces the inter-individual variability of $GEZI$, $S_I$ and $V$ from 50.9\%,  113\% and 34.4\% to 46.5\%, 88.6\% and 26.8\%, respectively (Table. \ref{tab:prm estimates}). Model parameter were well estimated, with relative standard error less than 9\%. Quantile-quantile plots and histograms suggest the log-normal distribution of the four model parameters (figures not shown). The goodness-of-fit plots (Figure \ref{fig: fittings}) indicate that the model can fully describe the observed glucose concentrations, without significant biases. The upper row of Figure \ref{fig: fittings} compares the population prediction of the base model (Figure \ref{fig: fittings}a) and our final covariate model (Figure \ref{fig: fittings}b), suggesting an improved description of the observed data.\\
+After pooling all the data together, the following minimal model with covariates was selected to describe the insulin-glucose profiles: $GEZI=0.0211*(1-0.480*DM)$; for healthy and obese subjects, $DM$ is 0; for T2DM subjects, $DM$ is 1; $S_I=(5.59e-05)*(1-0.575*DM)*(BMI/25.335)^{-2.12}$; BMI is in $kg/m^2$; $p2=0.0428$; $V=12.0*(weight/75)^{0.851}$; weight is in kg. The incorporation of these covariates into the final model reduces the inter-individual variability of $GEZI$, $S_I$ and $V$ from 50.9\%,  113\% and 34.4\% to 46.5\%, 88.6\% and 26.8\%, respectively (Table. \ref{tab:prm estimates}). Model parameter were well estimated, with relative standard error less than 9\%. Quantile-quantile plots and histograms suggest the log-normal distribution of the four model parameters (figures not shown). The goodness-of-fit plots (Figure \ref{fig: fittings}) indicate that the model can fully describe the observed glucose concentrations, without significant biases. The upper row of Figure \ref{fig: fittings} compares the population prediction of the base model (Figure \ref{fig: fittings}a) and our final covariate model (Figure \ref{fig: fittings}b), suggesting an improved description of the observed data.
+
 \subsection{$GEZI$ is decreased in T2DM, independent of BMI}
-The distribution of $GEZI$ in the three different cohorts (control, obese, T2DM) are shown in Figure \ref{fig: SG_co}. Similar values of $GEZI$ in control and obese subjects can be observed, which indicates extra adipose has no significant influence on glucose disposition by itself. In contrast, T2DM cohort displays a significantly lower $GEZI$ value (48\% lower) compared to the other two cohorts. Non-parametric test was conducted to compare mean $GEZI$ values in cohorts, which gave consistent results as graphical observation (control versus obese: p=0.29; T2DM versus control: p$<$2e-16; T2DM versus obese: p$<$2e-16). No other covariate was found to affect $GEZI$, which is line with a previous report (\cite{Denti2010}).\\
+The distribution of $GEZI$ in the three different cohorts (control, obese, T2DM) are shown in Figure \ref{fig: SG_co}. Similar values of $GEZI$ in control and obese subjects can be observed, which indicates extra adipose has no significant influence on glucose disposition by itself. In contrast, T2DM cohort displays a significantly lower $GEZI$ value (48\% lower) compared to the other two cohorts. Non-parametric test was conducted to compare mean $GEZI$ values in cohorts, which gave consistent results as graphical observation (control versus obese: p=0.29; T2DM versus control: p$<$2e-16; T2DM versus obese: p$<$2e-16). No other covariate was found to affect $GEZI$, which is line with a previous report (\cite{Denti2010}).
 
 \subsection{$S_I$ is decreased in T2DM and depends on BMI}
 The scatter plots of estimated $S_I$ and BMI of all the subjects are shown in Figure \ref{fig: SI_BMI}, with model predicted curves of two sub-populations (non T2DM, T2DM) superimposed. In both sub-populations, higher BMI values lead to decreased $S_I$ (with a power of -2.12). This is consistent with the conclusions in %cite the book
-, in which they reported a negative association between BMI and $S_I$ and reduced $S_I$ values in obese subjects. Also, type 2 diabetes subjects have significantly decreased (about 58\% lower) $S_I$ given the same BMI. But the relationship between $S_I$ and BMI is not altered by T2DM. This confirms $S_I$ can serve as a indicator or therapeutic target of type 2 diabetes or other related diseases. Besides the covariate models for $GEZI$ and $S_I$, the volume of glucose distribution (with a typical value of 12 L) has a positive correlation with the body weight of subjects (power of 0.85), without any difference across cohorts (Figure \ref{fig: V_BW}). This positive association is aligned with the previous report (\cite{Denti2010}), in which they normalized $V$ using subjects' body weights. \\
+, in which they reported a negative association between BMI and $S_I$ and reduced $S_I$ values in obese subjects. Also, type 2 diabetes subjects have significantly decreased (about 58\% lower) $S_I$ given the same BMI. But the relationship between $S_I$ and BMI is not altered by T2DM. This confirms $S_I$ can serve as a indicator or therapeutic target of type 2 diabetes or other related diseases. Besides the covariate models for $GEZI$ and $S_I$, the volume of glucose distribution (with a typical value of 12 L) has a positive correlation with the body weight of subjects (power of 0.85), without any difference across cohorts (Figure \ref{fig: V_BW}). This positive association is aligned with the previous report (\cite{Denti2010}), in which they normalized $V$ using subjects' body weights. 
+
 \subsection{Impaired $GEZI$ in T2DM patients has stronger influence on glucose concentration than $S_I$}
 In order to compare the relative contribution of $GEZI$ and $S_I$ on controlling glucose concentration, we simulated the glucose profiles of four virtual subjects with different $GEZI$ and $S_I$ values during an IVGTT (Figure \ref{fig: simu}). We fixed the body weight and BMI to median values of all subjects, so that the virtual subjects had the same $p2$ and volume of distributionb ($V$) without any effects by BMI. Compared to the healthy subject A, the decreases in $GEZI$ and $S_I$ were caused by the development of T2DM in other virtual subjects. Impaired function of controlling glucose can be observed in the virtual subject B (a typical T2DM patient) compared to subject A (Figure \ref{fig: simu}). The comparison of glucose profiles of subject C and D indicates the decrease of $GEZI$ due to T2DM can have stronger influence than the corresponding reduce in $S_I$, which indicates the important role of glucose effectiveness in the regulation of glucose homeostasis (\cite{Dube2015}). 
 
@@ -111,49 +113,48 @@ abc
 % mention remaining random effects of SG, SI, p2, V
 % mention variability of SI
 
-\section*{Article types}
+% \section*{Article types}
 
 % For requirements for a specific article type please refer to the Article Types on any Frontiers journal page. Please also refer to  \href{http://home.frontiersin.org/about/author-guidelines#Sections}{Author Guidelines} for further information on how to organize your manuscript in the required sections or their equivalents for your field
 
 % For Original Research articles, please note that the Material and Methods section can be placed in any of the following ways: before Results, before Discussion or after Discussion.
 
-\section{Manuscript Formatting}
+% \section{Manuscript Formatting}
 
-\subsection{Heading Levels}
+% \subsection{Heading Levels}
 
 %There are 5 heading levels
 
-\subsection{Level 2}
-\subsubsection{Level 3}
-\paragraph{Level 4}
-\subparagraph{Level 5}
+%\subsection{Level 2}
+%\subsubsection{Level 3}
+%\paragraph{Level 4}
+%\subparagraph{Level 5}
 
 %\subsection{Equations}
 % Equations should be inserted in editable format from the equation editor.
 
 
 
-\subsection{Figures}
+% \subsection{Figures}
 % Frontiers requires figures to be submitted individually, in the same order as they are referred to in the manuscript. Figures will then be automatically embedded at the bottom of the submitted manuscript. Kindly ensure that each table and figure is mentioned in the text and in numerical order. Figures must be of sufficient resolution for publication \href{http://home.frontiersin.org/about/author-guidelines#ResolutionRequirements}{see here for examples and minimum requirements}. Figures which are not according to the guidelines will cause substantial delay during the production process. Please see \href{http://home.frontiersin.org/about/author-guidelines#GeneralStyleGuidelinesforFigures}{here} for full figure guidelines. Cite figures with subfigures as figure \ref{fig:2}B.
 
 
-\subsubsection{Permission to Reuse and Copyright}
+% \subsubsection{Permission to Reuse and Copyright}
 % Figures, tables, and images will be published under a Creative Commons CC-BY licence and permission must be obtained for use of copyrighted material from other sources (including re-published/adapted/modified/partial figures and images from the internet). It is the responsibility of the authors to acquire the licenses, to follow any citation instructions requested by third-party rights holders, and cover any supplementary charges.
 %%Figures, tables, and images will be published under a Creative Commons CC-BY licence and permission must be obtained for use of copyrighted material from other sources (including re-published/adapted/modified/partial figures and images from the internet). It is the responsibility of the authors to acquire the licenses, to follow any citation instructions requested by third-party rights holders, and cover any supplementary charges.
 
-\subsection{Tables}
+% \subsection{Tables}
 % Please note that very large tables (covering several pages) cannot be included in the final PDF for reasons of space. These tables will be published as \href{http://home.frontiersin.org/about/author-guidelines#SupplementaryMaterial}{Supplementary Material} on the online article page at the time of acceptance. The author will be notified during the typesetting of the final article if this is the case. 
 
-\section{Nomenclature}
+\section*{Nomenclature}
 
-\subsection{Resource Identification Initiative}
+\subsection*{Resource Identification Initiative}
 % To take part in the Resource Identification Initiative, please use the corresponding catalog number and RRID in your current manuscript. For more information about the project and for steps on how to search for an RRID, please click \href{http://www.frontiersin.org/files/pdf/letter_to_author.pdf}{here}.
 
-\subsection{Life Science Identifiers}
+\subsection*{Life Science Identifiers}
 % Life Science Identifiers (LSIDs) for ZOOBANK registered names or nomenclatural acts should be listed in the manuscript before the keywords. For more information on LSIDs please see \href{http://www.frontiersin.org/about/AuthorGuidelines#InclusionofZoologicalNomenclature}{Inclusion of Zoological Nomenclature} section of the guidelines.
 
-
-\section{Additional Requirements}
+\section*{Additional Requirements}
 % For additional requirements for specific article types and further information please refer to \href{http://www.frontiersin.org/about/AuthorGuidelines#AdditionalRequirements}{Author Guidelines}.
 
 \section*{Conflict of Interest Statement}
@@ -260,7 +261,7 @@ Group number &
 50 & Obese   & 11 & 11/0/0  & 45.9   & 111     & 44.7   & 158   & IVGTT    & \cite{2003_INFLAMMATORY_Davi}   \\
 51 & Obese   & 11 & 11/0/0  & 48.2   & 95.8    & 38.1   & 159   & IVGTT    & \cite{2003_INFLAMMATORY_Davi}  \\ \hline
 \end{tabular}}
-The values in cells without superscript are known. \\ 
+The values in cells without superscript are known \\ 
 $^a$: random assignment \\
 $^b$: mean value \\
 $^c$: PopGen \\
@@ -321,15 +322,15 @@ IIV: inter-individual variability
 \begin{center}
 \includegraphics[width=15cm]{p2.PNG}
 \end{center}
-\caption{Overview of covariate values and relationships. Histograms plots for continuous covariates and bar graphs for discrete covariates are shown on the diagnoal line. In the lower triangle, the boxplots between continuous and discrete covariates and scatter plots between continuous covariates are displayed. In the upper triangle, the correlation coefficients between continuous covariates are shown.}
+\caption{Overview of covariate values and relationships. Histograms plots for continuous covariates and bar graphs for discrete covariates are shown on the diagnoal line. In the lower triangle, the boxplots between continuous and discrete covariates and scatter plots between continuous covariates are displayed. In the upper triangle, the correlation coefficients between continuous covariates are shown}
 \label{fig: cova}
 \end{figure}
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=15cm]{comb.PNG}
+\includegraphics[width=14cm]{comb.PNG}
 \end{center}
-\caption{Goodness-of-fit plots}
+\caption{Goodness-of-fit plots of the based and final model. \textbf{a}: observed glucose concentration versus population prediction via the base model.  \textbf{b}: observed glucose concentration versus population prediction via the final model. \textbf{c}: observed glucose concentration versus individual prediction via the final model. \textbf{d}: standardized residual versus population prediction via the final model. \textbf{e}: standardized residual of the final model versus time}
 \label{fig: fittings}
 \end{figure}
 
@@ -337,7 +338,7 @@ IIV: inter-individual variability
 \begin{center}
 \includegraphics[width=15cm]{SG_co.PNG}
 \end{center}
-\caption{The distribution of $GEZI$ values by different cohorts}
+\caption{Violin plots showing the distribution of $GEZI$ values in different cohorts. Boxplots were inserted for each cohort to indicate medians and interquartile ranges}
 \label{fig: SG_co}
 \end{figure}
 
@@ -345,7 +346,7 @@ IIV: inter-individual variability
 \begin{center}
 \includegraphics[width=15cm]{SI_BMI.PNG}
 \end{center}
-\caption{BMI effect on SI}
+\caption{Scatter plots and model predicted relationships between $S_I$ and BMI in different cohorts. Dots with different colors display the negative association between $S_I$ and BMI in the three cohorts. The black curve shows the model predicted $S_I$ given the BMI value in non T2DM subjects, with standard error of the prediction labelled. The blue curve is the corresponding curve in T2DM patients}
 \label{fig: SI_BMI}
 \end{figure}
 
@@ -353,7 +354,7 @@ IIV: inter-individual variability
 \begin{center}
 \includegraphics[width=15cm]{V_BW.PNG}
 \end{center}
-\caption{BW effect on V}
+\caption{Scatter plots and model predicted relationships between $V$ and body weight in different cohorts. Dots with different colors display the positive association between $V$ and body weight. The black curve shows the model predicted $V$ given the body weight in all the subjects}
 \label{fig: V_BW}
 \end{figure}
 
@@ -361,7 +362,7 @@ IIV: inter-individual variability
 \begin{center}
 \includegraphics[width=15cm]{p.PNG}
 \end{center}
-\caption{Simulation of glucose concentration profile of virtual subjects with different $GEZI$ and $S_I$ values in an IVGTT. }
+\caption{Simulation of glucose concentration profiles of four virtual subjects in an IVGTT. The subjects have the same body weight, BMI, $p2$, $V$, with different $GEZI$ and $S_I$. Virtual subject A has normal $GEZI$ and $S_I$. Virtual subject B is a typical T2DM patient with imparied $GEZI$ and $S_I$. For subject C, $GEZI$ is decreased but not $S_I$. $GEZI$ is unchanged in subject D, but $S_I$ is decreased to the same level as subject B}
 \label{fig: simu}
 \end{figure}
 
